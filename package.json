@@ -1,6 +1,11 @@
 {
   "name": "roslovets-portfolio",
   "version": "0.0.3",
+  "homepage": "https://roslovets.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roslovets/roslovets.github.io.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host=0.0.0.0 --disable-host-check --open=true --port=4200",

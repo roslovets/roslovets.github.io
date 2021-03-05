@@ -1,5 +1,5 @@
 {
-  "name": "roslovets",
+  "name": "roslovets-portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,9 +7,10 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postversion": "git push && git push --tags"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^11.2.4",
     "@angular/common": "^11.2.4",

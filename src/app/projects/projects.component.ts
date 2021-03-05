@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormArray } from '@angular/forms';
+import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -11,33 +13,51 @@ import { DataService } from '../services/data.service';
 export class ProjectsComponent implements OnInit {
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    private route: ActivatedRoute
   ) { }
 
   contentChboxes: FormArray;
-  contentCatsValues: boolean[] = [true, true, true];
-  contentCats: string[] = [
+  allTypes: string[] = [
     'MATLAB',
     'Simulink',
     'WEB'
   ];
+  selectedTypes: string[];
 
   projects$: Observable<any>;
+  queryParams$: Observable<boolean>;
+  contentChboxesSub: Subscription;
 
   ngOnInit() {
-    this.projects$ = this.dataService.getProjects();
     this.contentChboxes = new FormArray(
-      this.contentCats.map((c, i) => new FormControl(this.contentCatsValues[i]))
+      this.allTypes.map((c, i) => new FormControl())
     );
-    this.contentChboxes.valueChanges.subscribe(vals => this.contentCatsValues = vals);
+    this.contentChboxesSub = this.contentChboxes.valueChanges.pipe(
+      map(vals => {
+        return this.allTypes.filter((cat: string, i: number): boolean => vals[i]);
+      })
+    ).subscribe(selectedCats => this.selectedTypes = selectedCats);
+    this.queryParams$ = this.route.queryParams.pipe(
+      map(params => {
+        let contentCatsValues = this.allTypes.map(Boolean);
+        let type = params['type']
+        if (type) {
+          contentCatsValues = this.allTypes.map(t => t.toLocaleLowerCase() === type);
+        }
+        this.contentChboxes.setValue(contentCatsValues);
+        return true;
+      }),
+    );
+    this.projects$ = this.dataService.getProjects();
   }
 
   btnLinkClick(url: string) {
     window.open(url);
   }
 
-  checkShow(type: string) {
-    return this.contentCatsValues[this.contentCats.indexOf(type)];
+  filterByType(projects: any[]) {
+    return projects.filter(project => this.selectedTypes.includes(project.type));
   }
 
   getOpenBtnName(project: any) {
@@ -48,7 +68,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   isContent() {
-    return this.contentCatsValues.some(Boolean);
+    return this.selectedTypes.length > 0;
+  }
+
+  ngOnDestroy() {
+    this.contentChboxesSub.unsubscribe();
   }
 
 }

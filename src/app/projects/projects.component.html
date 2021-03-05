@@ -1,0 +1,43 @@
+<div class="container mb-5">
+  <div class="row text-center">
+    <div class="col">
+      <mat-checkbox *ngFor="let chb of contentChboxes.controls; let i = index" class="mr-3" [formControl]="chb">
+        {{contentCats[i]}}
+      </mat-checkbox>
+    </div>
+  </div>
+
+  <div *ngIf="!isContent()">
+    <div class="row text-center mt-2">
+      <div class="col">
+        {{'PROJECT.SELECTMSG' | translate}}
+      </div>
+    </div>
+    <div class="col text-center mt-1">
+      <img class="img-fluid" src="assets/images/cat-waiting.gif" alt="Bored">
+    </div>
+  </div>
+
+  <div *ngIf="projects$ | async as projects">
+    <div *ngFor="let project of projects">
+      <div class="row mt-4" *ngIf="checkShow(project.type)">
+        <div class="col offset-sm-1 col-sm-10 offset-lg-3 col-lg-6">
+          <mat-card>
+            <mat-card-header>
+              <img mat-card-avatar class="m-2" [src]="dataService.getAvatar(project)">
+              <mat-card-title>{{project.title}}</mat-card-title>
+              <mat-card-subtitle>{{project.description | translate}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="dataService.getCover(project)" alt="Project cover" *ngIf="project.cover">
+            <mat-card-content class="multi_lines_text">{{project.details | translate}}</mat-card-content>
+            <mat-card-actions class="text-right">
+              <button mat-button (click)="btnLinkClick(project.github)" *ngIf="project.github">GITHUB</button>
+              <button mat-button (click)="btnLinkClick(project.url)" *ngIf="project.url">{{getOpenBtnName(project) |
+                translate}}</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.jumbo {
+  padding: 40px;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+.topalert {
+  margin-top: -30px !important;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  max-height: 100px;
+  min-height: 75px;
+}
+
+.occup {
+  font-size: 1.2em;
+}
+
+.hint {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dashed #dd0000;
+  border-bottom-color: black;
+}
+
+.np {
+  padding: 0px !important;
+  margin: -6px !important;
+  color: #ffffff;
+}
+
+.np:hover {
+  color: #eeeeee !important;
+}
+
+mat-form-field {
+  width: 50px;
+}

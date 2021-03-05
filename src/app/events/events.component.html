@@ -1,0 +1,44 @@
+<div class="container mb-5">
+  <div class="row text-center">
+    <div class="col">
+      <mat-checkbox class="mr-3" [(ngModel)]="showWebinar">{{'EVENT.TYPE.WEBINARS' | translate}}</mat-checkbox>
+      <mat-checkbox class="mr-3" [(ngModel)]="showSeminar">{{'EVENT.TYPE.SEMINARS' | translate}}</mat-checkbox>
+    </div>
+  </div>
+  <div *ngIf="isEn()" class="row mt-2 justify-content-center">
+    <div class="alert alert-info py-1 text-center" role="alert">
+      All events materials are presented in Russian. Sorry
+    </div>
+  </div>
+
+  <div *ngIf="!(showSeminar||showWebinar)">
+    <div class="row text-center mt-2">
+      <div class="col">
+        {{'PROJECT.SELECTMSG' | translate}}
+      </div>
+    </div>
+    <div class="col text-center mt-1">
+      <img class="img-fluid" src="assets/images/cat-waiting.gif" alt="Bored">
+    </div>
+  </div>
+
+  <div *ngIf="events$ | async as events">
+    <div class="mt-4" *ngFor="let event of events">
+      <div class="row mt-4" *ngIf="checkShow(event.type)">
+        <div class="col offset-sm-1 col-sm-10 offset-lg-3 col-lg-6">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{event.title | translate}}</mat-card-title>
+              <mat-card-subtitle>{{event.type | translate}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="dataService.getCover(event)" alt="Video cover">
+            <mat-card-content class="multi_lines_text">{{event.details | translate}}</mat-card-content>
+            <mat-card-actions class="text-right">
+              <button mat-button (click)="btnLinkClick(event.materials)">{{'EVENT.MATERIALS' | translate}}</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

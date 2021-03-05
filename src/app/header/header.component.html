@@ -1,0 +1,60 @@
+<div class="bg-light jumbotron jumbotron-fluid jumbo mb-2 px-0">
+  <div class="container">
+    <!--<div class="row justify-content-center topalert">
+      <div class="alert alert-danger py-1 m-0" role="alert">
+        {{'HEADER.UNDERCONSTR' | translate}}
+      </div>
+    </div>-->
+    <div class="row">
+      <div class="col-4 pr-0">
+        <div class="text-right">
+          <img class="img-fluid avatar" src="/assets/images/roslovets-ava2.png" alt="Roslovets avatar">
+        </div>
+        <div class="d-block d-sm-none mt-2 text-center">
+          <app-contacts></app-contacts>
+        </div>
+      </div>
+      <div class="col">
+        <h2 class="">{{'HEADER.NAME' | translate}}</h2>
+        <span class="occup">{{'HEADER.TITLE' | translate}}</span>
+
+        <div class="d-none d-sm-block">
+          <div class="row text-right">
+            <div class="col">
+              <app-contacts></app-contacts>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--Content type selector-->
+<div class="container">
+  <div class="row text-center">
+    <div class="col-2 px-0 d-none d-sm-block">
+    </div>
+    <div class="col">
+      <mat-button-toggle-group [formControl]="contentControl">
+        <mat-button-toggle *ngFor="let type of contentTypes" [value]="type" [routerLink]="type">
+          {{"HEADER." + type | uppercase | translate}}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+
+    <!--Language selector-->
+    <div class="col-2 px-0" *ngIf="getLangs() as langs">
+      <mat-form-field>
+        <mat-select [formControl]="langControl">
+          <mat-option *ngFor="let lang of langs" [value]="lang">
+            {{lang | uppercase}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>

@@ -17,13 +17,16 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install and build 🔧
+        run: |
+          npm ci
+          npm run build
+
       - name: Deploy 🔧
-        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          build_configuration: production
-          deploy_branch: gh-pages
-          angular_dist_build_folder: dist
+          branch: gh-pages
+          folder: build
 
       - name: Create release 🛎️
         id: create_release

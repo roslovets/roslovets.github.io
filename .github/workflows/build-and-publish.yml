@@ -1,0 +1,35 @@
+name: Build and publish portfolio
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔃 Checkout repository
+        uses: actions/checkout@v2
+
+      - name: ⚙️ Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: 🛠️ Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: 📢 Publish
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: dist
+
+      - name: 🔖 Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -12,7 +12,6 @@
     "url": "https://github.com/roslovets/roslovets.github.io.git"
   },
   "scripts": {
-    "ng": "ng",
     "start": "ng serve --host=0.0.0.0 --disable-host-check --open=true --port=4200",
     "build": "ng build --prod",
     "test": "ng test",

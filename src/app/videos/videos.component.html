@@ -35,7 +35,8 @@
             <img mat-card-image [src]="dataService.getCover(video)" alt="Video cover">
             <mat-card-content class="multi_lines_text">{{video.details | translate}}</mat-card-content>
             <mat-card-actions class="text-right">
-              <button mat-button (click)="btnLinkClick(video.materials)" *ngIf="video.materials">{{'VIDEO.MATERIALS' | translate}}</button>
+              <button mat-button (click)="btnLinkClick(video.materials)" *ngIf="video.materials">{{'VIDEO.MATERIALS' |
+                translate}}</button>
               <button mat-button (click)="btnLinkClick(video.youtube)">{{'VIDEO.WATCH' | translate}}</button>
             </mat-card-actions>
           </mat-card>

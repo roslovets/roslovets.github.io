@@ -111,6 +111,11 @@
 		"QUIZBOT":{
 			"DESCRIPTION":"OTUS online school сhatbot for conducting surveys",
 			"DETAILS":"The Telegram bot checks knowledge in various IT areas and, if the survey is successful, it issues a promotional code for a discount for purchasing an online course"
+		},
+		"TYPE":{
+			"MATLAB":"MATLAB",
+			"SIMULINK":"Simulink",
+			"WEB":"WEB"
 		}
 	},
 	"VIDEO":{

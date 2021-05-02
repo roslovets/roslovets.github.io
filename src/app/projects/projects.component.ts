@@ -41,7 +41,7 @@ export class ProjectsComponent implements OnInit {
     this.queryParams$ = this.route.queryParams.pipe(
       map(params => {
         let contentCatsValues = this.allTypes.map(Boolean);
-        let type = params['type']
+        let type = params['type'].toLocaleLowerCase();
         if (type) {
           contentCatsValues = this.allTypes.map(t => t.toLocaleLowerCase() === type);
         }
@@ -50,6 +50,10 @@ export class ProjectsComponent implements OnInit {
       }),
     );
     this.projects$ = this.dataService.getProjects();
+  }
+
+  getType(num: number): string {
+    return "PROJECT.TYPE." + this.allTypes[num].toUpperCase();
   }
 
   btnLinkClick(url: string) {

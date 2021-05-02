@@ -12,36 +12,32 @@ import { DataService } from '../services/data.service';
 export class ProjectsComponent implements OnInit {
 
   constructor(
-    private dataService: DataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private dataService: DataService
   ) { }
 
   allTypes: string[] = [
-    'MATLAB',
-    'Simulink',
-    'WEB'
+    'PROJECT.TYPE.MATLAB',
+    'PROJECT.TYPE.SIMULINK',
+    'PROJECT.TYPE.WEB'
   ];
   selectedTypes: string[] = [];
   initTypes: string[];
-
-  projects$: Observable<any>;
   queryParams$: Observable<boolean>;
+  projects$: Observable<any>;
 
   ngOnInit() {
     this.queryParams$ = this.route.queryParams.pipe(
       map((params: any): boolean => {
         let type = params['type'];
         if (type) {
-          this.initTypes = this.allTypes.filter(t => t.toLocaleLowerCase() === type.toLocaleLowerCase());
+          type = "PROJECT.TYPE." + type.toLocaleUpperCase();
+          this.initTypes = this.allTypes.filter(t => t.toLocaleUpperCase() === type);
         }
         return true;
       }),
     );
     this.projects$ = this.dataService.getProjects();
-  }
-
-  btnLinkClick(url: string) {
-    window.open(url);
   }
 
   filterByType(projects: any[]): any[] {
@@ -57,6 +53,10 @@ export class ProjectsComponent implements OnInit {
       return 'PROJECT.GETINFO'
     else
       return 'PROJECT.OPEN'
+  }
+
+  btnLinkClick(url: string) {
+    window.open(url);
   }
 
 }

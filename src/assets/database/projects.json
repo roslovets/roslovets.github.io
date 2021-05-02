@@ -1,7 +1,7 @@
 [
 	{
 		"title":"MATLAB WEB API",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"WEBAPI",
 		"cover":"matlab-web-api.jpg",
 		"description":"PROJECT.WEBAPI.DESCRIPTION",
@@ -11,7 +11,7 @@
 	},
 	{
 		"title":"Icons for MATLAB",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"ICONS",
 		"cover":"icons-for-matlab.jpg",
 		"description":"PROJECT.ICONS.DESCRIPTION",
@@ -21,7 +21,7 @@
 	},
 	{
 		"title":"Exponenta Toolbox",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"EXP",
 		"cover":"exponenta-toolbox.jpg",
 		"description":"PROJECT.EXP.DESCRIPTION",
@@ -31,7 +31,7 @@
 	},
 	{
 		"title":"Toolbox Extender",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"TBEXT",
 		"cover":"toolbox-extender.jpg",
 		"description":"PROJECT.TBEXT.DESCRIPTION",
@@ -41,7 +41,7 @@
 	},
 	{
 		"title":"MATLAB Course for Educators",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"EDU",
 		"cover":"edu-course.jpg",
 		"description":"PROJECT.EDU.DESCRIPTION",
@@ -51,7 +51,7 @@
 	},
 	{
 		"title":"Data Analysis Demo",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"DATA",
 		"cover":"data-demo.jpg",
 		"description":"PROJECT.DATA.DESCRIPTION",
@@ -61,7 +61,7 @@
 	},
 	{
 		"title":"RegPrint",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"REGPRINT",
 		"cover":"regprint.jpg",
 		"description":"PROJECT.REGPRINT.DESCRIPTION",
@@ -71,7 +71,7 @@
 	},
 	{
 		"title":"MATLAB\/Simulink Exam",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"CERT",
 		"cover":"ml-cert.jpg",
 		"description":"PROJECT.CERT.DESCRIPTION",
@@ -81,7 +81,7 @@
 	},
 	{
 		"title":"GYROBOY MATLAB PROJECT",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"GMP",
 		"cover":"gmp.jpg",
 		"description":"PROJECT.GMP.DESCRIPTION",
@@ -91,7 +91,7 @@
 	},
 	{
 		"title":"RACECAR",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"RACECAR",
 		"cover":"racecar.jpg",
 		"description":"PROJECT.RACECAR.DESCRIPTION",
@@ -101,7 +101,7 @@
 	},
 	{
 		"title":"Virus Propagation Simulator",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"VIRUS",
 		"cover":"virus.jpg",
 		"description":"PROJECT.VIRUS.DESCRIPTION",
@@ -111,7 +111,7 @@
 	},
 	{
 		"title":"Instrument Control over Serial",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"INSTR",
 		"cover":"instrument-control.jpg",
 		"description":"PROJECT.INSTR.DESCRIPTION",
@@ -121,7 +121,7 @@
 	},
 	{
 		"title":"Fidget Spinner 3-DOF Gyroscope",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SPINNER",
 		"cover":"spinner.jpg",
 		"description":"PROJECT.SPINNER.DESCRIPTION",
@@ -131,7 +131,7 @@
 	},
 	{
 		"title":"Spinner Speedometer",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SPEED",
 		"cover":"speedometer.jpg",
 		"description":"PROJECT.SPEED.DESCRIPTION",
@@ -141,7 +141,7 @@
 	},
 	{
 		"title":"Arduino Weather Station",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"WEATHER",
 		"cover":"weather-station.jpg",
 		"description":"PROJECT.WEATHER.DESCRIPTION",
@@ -151,7 +151,7 @@
 	},
 	{
 		"title":"Arduino IoT Library",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SENSORS",
 		"cover":"arduino-sensors.jpg",
 		"description":"PROJECT.SENSORS.DESCRIPTION",
@@ -161,7 +161,7 @@
 	},
 	{
 		"title":"Atomic Frequency Standard",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"FREQ",
 		"cover":"freq-stand.jpg",
 		"description":"PROJECT.FREQ.DESCRIPTION",
@@ -171,7 +171,7 @@
 	},
 	{
 		"title":"NeuroMatrix Target",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"NMTARGET",
 		"cover":"neuromatrix-target.jpg",
 		"description":"PROJECT.NMTARGET.DESCRIPTION",
@@ -181,7 +181,7 @@
 	},
 	{
 		"title":"NetSuite Scripts",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"NS",
 		"cover":"netsuite.jpg",
 		"description":"PROJECT.NS.DESCRIPTION",
@@ -191,7 +191,7 @@
 	},
 	{
 		"title":"OTUS Quiz Bot (Telegram)",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"QUIZBOT",
 		"cover":"quizbot.jpg",
 		"description":"PROJECT.QUIZBOT.DESCRIPTION",
@@ -201,7 +201,7 @@
 	},
 	{
 		"title":"Telegram Redirect",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"TG",
 		"cover":"tg.jpg",
 		"description":"PROJECT.TG.DESCRIPTION",
@@ -211,7 +211,7 @@
 	},
 	{
 		"title":"GitHub Binary Downloader",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"GHBIN",
 		"cover":"ghbin.jpg",
 		"description":"PROJECT.GHBIN.DESCRIPTION",
@@ -221,7 +221,7 @@
 	},
 	{
 		"title":"FaryaRos.com",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"FARYA",
 		"cover":"faryaros.jpg",
 		"description":"PROJECT.FARYA.DESCRIPTION",
@@ -231,7 +231,7 @@
 	},
 	{
 		"title":"roslovets.github.io",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"ROSLOVETS",
 		"cover":"roslovets.jpg",
 		"description":"PROJECT.ROSLOVETS.DESCRIPTION",

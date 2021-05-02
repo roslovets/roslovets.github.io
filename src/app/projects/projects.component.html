@@ -8,24 +8,22 @@
 
   <div *ngIf="projects$ | async as projects">
 
-    <div>
-      <div class="d-flex align-content-center flex-wrap mb-3 mt-4">
-        <div class="flex-grow-1 mx-auto mt-2" *ngFor="let project of filterByType(projects)">
-          <mat-card class="content-card mx-auto">
-            <mat-card-header>
-              <img mat-card-avatar class="m-1" [src]="dataService.getAvatar(project)">
-              <mat-card-title>{{project.title}}</mat-card-title>
-              <mat-card-subtitle>{{project.description | translate}}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image [src]="dataService.getCover(project)" alt="Project cover" *ngIf="project.cover">
-            <mat-card-content class="multi_lines_text">{{project.details | translate}}</mat-card-content>
-            <mat-card-actions class="text-right">
-              <button mat-button (click)="btnLinkClick(project.github)" *ngIf="project.github">GITHUB</button>
-              <button mat-button (click)="btnLinkClick(project.url)" *ngIf="project.url">{{getOpenBtnName(project) |
-                translate}}</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
+    <div class="d-flex align-content-center flex-wrap mb-3 mt-4">
+      <div class="flex-grow-1 mx-auto mt-2" *ngFor="let project of filterByType(projects)">
+        <mat-card class="content-card mx-auto">
+          <mat-card-header>
+            <img mat-card-avatar class="m-1" [src]="dataService.getAvatar(project)">
+            <mat-card-title>{{project.title}}</mat-card-title>
+            <mat-card-subtitle>{{project.description | translate}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="dataService.getCover(project)" alt="Project cover" *ngIf="project.cover">
+          <mat-card-content class="multi_lines_text">{{project.details | translate}}</mat-card-content>
+          <mat-card-actions class="text-right">
+            <button mat-button (click)="btnLinkClick(project.github)" *ngIf="project.github">GITHUB</button>
+            <button mat-button (click)="btnLinkClick(project.url)" *ngIf="project.url">{{getOpenBtnName(project) |
+              translate}}</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
 

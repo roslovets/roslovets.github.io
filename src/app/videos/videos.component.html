@@ -1,11 +1,6 @@
-<div class="container mb-5">
-  <div class="row text-center">
-    <div class="col">
-      <mat-checkbox class="mr-3" [(ngModel)]="showPlaylist">{{'VIDEO.TYPE.PLAYLISTS' | translate}}</mat-checkbox>
-      <mat-checkbox class="mr-3" [(ngModel)]="showVideo">{{'VIDEO.TYPE.VIDEOS' | translate}}</mat-checkbox>
-      <mat-checkbox class="" [(ngModel)]="showStream">{{'VIDEO.TYPE.STREAMS' | translate}}</mat-checkbox>
-    </div>
-  </div>
+<div class="container mb-5" *ngIf="queryParams$ | async">
+
+  <app-types [allTypes]="allTypes" [initTypes]="initTypes" (selectedTypesChange)="selectedTypes=$event"></app-types>
 
   <div *ngIf="isEn()" class="row mt-2 justify-content-center">
     <div class="alert alert-info py-1 text-center" role="alert">
@@ -13,36 +8,29 @@
     </div>
   </div>
 
-  <div *ngIf="!(showPlaylist||showVideo||showStream)">
-    <div class="row text-center mt-2">
-      <div class="col">
-        {{'PROJECT.SELECTMSG' | translate}}
-      </div>
-    </div>
-    <div class="col text-center mt-1">
-      <img class="img-fluid" src="assets/images/cat-waiting.gif" alt="Bored">
-    </div>
+  <div *ngIf="!isSelected()">
+    <app-empty></app-empty>
   </div>
 
   <div *ngIf="videos$ | async as videos">
-    <div class="mt-4" *ngFor="let video of videos">
-      <div class="row mt-4" *ngIf="checkShow(video.type)">
-        <div class="col offset-sm-1 col-sm-10 offset-lg-3 col-lg-6">
-          <mat-card>
-            <mat-card-header>
-              <mat-card-title>{{video.title | translate}}</mat-card-title>
-              <mat-card-subtitle>{{video.type | translate}}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image [src]="dataService.getCover(video)" alt="Video cover">
-            <mat-card-content class="multi_lines_text">{{video.details | translate}}</mat-card-content>
-            <mat-card-actions class="text-right">
-              <button mat-button (click)="btnLinkClick(video.materials)" *ngIf="video.materials">{{'VIDEO.MATERIALS' |
-                translate}}</button>
-              <button mat-button (click)="btnLinkClick(video.youtube)">{{'VIDEO.WATCH' | translate}}</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
+
+    <div class="d-flex align-content-center flex-wrap mb-3 mt-4">
+      <div class="flex-grow-1 mx-auto mt-2" *ngFor="let video of filterByType(videos)">
+        <mat-card class="content-card mx-auto">
+          <mat-card-header>
+            <mat-card-title>{{video.title | translate}}</mat-card-title>
+            <mat-card-subtitle>{{video.type | translate}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image [src]="dataService.getCover(video)" alt="Video cover" *ngIf="video.cover">
+          <mat-card-content class="multi_lines_text">{{video.details | translate}}</mat-card-content>
+          <mat-card-actions class="text-right">
+            <button mat-button (click)="btnLinkClick(video.materials)" *ngIf="video.materials">{{'VIDEO.MATERIALS' |
+              translate}}</button>
+            <button mat-button (click)="btnLinkClick(video.youtube)">{{'VIDEO.WATCH' | translate}}</button>
+          </mat-card-actions>
+        </mat-card>
       </div>
     </div>
+
   </div>
 </div>

@@ -40,7 +40,7 @@ export class TypesComponent implements OnInit, OnDestroy {
   }
 
   getType(num: number): string {
-    return "PROJECT.TYPE." + this.allTypes[num].toUpperCase();
+    return this.allTypes[num];
   }
 
   ngOnDestroy() {

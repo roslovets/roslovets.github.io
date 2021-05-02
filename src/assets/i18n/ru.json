@@ -115,7 +115,7 @@
 		"TYPE":{
 			"MATLAB":"MATLAB",
 			"SIMULINK":"Simulink",
-			"WEB":"Веб"
+			"WEB":"WEB"
 		}
 	},
 	"VIDEO":{

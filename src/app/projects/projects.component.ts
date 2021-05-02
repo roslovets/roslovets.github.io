@@ -37,15 +37,16 @@ export class ProjectsComponent implements OnInit {
       map(vals => {
         return this.allTypes.filter((cat: string, i: number): boolean => vals[i]);
       })
-    ).subscribe(selectedCats => this.selectedTypes = selectedCats);
+    ).subscribe(selectedTypes => this.selectedTypes = selectedTypes);
     this.queryParams$ = this.route.queryParams.pipe(
       map(params => {
-        let contentCatsValues = this.allTypes.map(Boolean);
-        let type = params['type'].toLocaleLowerCase();
+        let contentTypesValues = this.allTypes.map(Boolean);
+        let type = params['type'];
         if (type) {
-          contentCatsValues = this.allTypes.map(t => t.toLocaleLowerCase() === type);
+          type = type.toLocaleLowerCase();
+          contentTypesValues = this.allTypes.map(t => t.toLocaleLowerCase() === type);
         }
-        this.contentChboxes.setValue(contentCatsValues);
+        this.contentChboxes.setValue(contentTypesValues);
         return true;
       }),
     );
@@ -71,7 +72,7 @@ export class ProjectsComponent implements OnInit {
       return 'PROJECT.OPEN'
   }
 
-  isContent() {
+  isSelected() {
     return this.selectedTypes.length > 0;
   }
 

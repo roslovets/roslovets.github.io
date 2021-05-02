@@ -1,21 +1,9 @@
 <div class="container mb-5" *ngIf="queryParams$ | async">
-  <div class="row text-center">
-    <div class="col">
-      <mat-checkbox *ngFor="let chb of contentChboxes.controls; let i = index" class="mr-3" [formControl]="chb">
-        {{getType(i) | translate}}
-      </mat-checkbox>
-    </div>
-  </div>
+
+  <app-types [allTypes]="allTypes" [initTypes]="initTypes" (selectedTypesChange)="selectedTypes=$event"></app-types>
 
   <div *ngIf="!isSelected()">
-    <div class="row text-center mt-2">
-      <div class="col">
-        {{'PROJECT.SELECTMSG' | translate}}
-      </div>
-    </div>
-    <div class="col text-center mt-1">
-      <img class="img-fluid" src="assets/images/cat-waiting.gif" alt="Bored">
-    </div>
+    <app-empty></app-empty>
   </div>
 
   <div *ngIf="projects$ | async as projects">

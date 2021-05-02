@@ -19,10 +19,12 @@ import { ProjectsComponent } from './projects/projects.component';
 import { VideosComponent } from './videos/videos.component';
 import { EventsComponent } from './events/events.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { FooterComponent } from './footer/footer.component';
+import { TypesComponent } from './types/types.component';
+import { EmptyComponent } from './empty/empty.component';
 
 import { LangService } from './services/lang.service';
 import { DataService } from './services/data.service';
-import { FooterComponent } from './footer/footer.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +39,9 @@ export function createTranslateLoader(http: HttpClient) {
     VideosComponent,
     EventsComponent,
     ContactsComponent,
-    FooterComponent
+    FooterComponent,
+    TypesComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,

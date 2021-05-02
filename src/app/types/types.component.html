@@ -1,0 +1,7 @@
+<div class="row text-center">
+    <div class="col">
+        <mat-checkbox *ngFor="let chb of contentChboxes.controls; let i = index" class="mr-3" [formControl]="chb">
+            {{getType(i) | translate}}
+        </mat-checkbox>
+    </div>
+</div>

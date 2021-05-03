@@ -1,10 +1,5 @@
 <div class="bg-light jumbotron jumbotron-fluid jumbo mb-2 px-0">
   <div class="container">
-    <!--<div class="row justify-content-center topalert">
-      <div class="alert alert-danger py-1 m-0" role="alert">
-        {{'HEADER.UNDERCONSTR' | translate}}
-      </div>
-    </div>-->
     <div class="row">
       <div class="col-4 pr-0">
         <div class="text-right">
@@ -46,7 +41,7 @@
     </div>
 
     <!--Language selector-->
-    <div class="col-2 px-0" *ngIf="getLangs() as langs">
+    <div class="col-2 px-0 text-right" *ngIf="getLangs() as langs">
       <mat-form-field>
         <mat-select [formControl]="langControl">
           <mat-option *ngFor="let lang of langs" [value]="lang">

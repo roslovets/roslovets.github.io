@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
   }
 
   getAvatar(): string {
-    return "assets/images/" + this.entity.type + "-logo.png";
+    return "assets/images/" + this.entity.type + ".png";
   }
 
   getCover(): string {

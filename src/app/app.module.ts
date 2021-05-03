@@ -22,6 +22,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { TypesComponent } from './types/types.component';
 import { EmptyComponent } from './empty/empty.component';
+import { CardComponent } from './card/card.component';
 
 import { LangService } from './services/lang.service';
 import { DataService } from './services/data.service';
@@ -41,7 +42,8 @@ export function createTranslateLoader(http: HttpClient) {
     ContactsComponent,
     FooterComponent,
     TypesComponent,
-    EmptyComponent
+    EmptyComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

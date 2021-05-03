@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit {
     private dataService: DataService
   ) { }
 
+  typePrefix: string = 'PROJECT.TYPE.';
   allTypes: string[] = [
     'PROJECT.TYPE.MATLAB',
     'PROJECT.TYPE.SIMULINK',
@@ -31,7 +32,7 @@ export class ProjectsComponent implements OnInit {
       map((params: any): boolean => {
         let type = params['type'];
         if (type) {
-          type = "PROJECT.TYPE." + type.toLocaleUpperCase();
+          type = this.typePrefix + type.toLocaleUpperCase();
           this.initTypes = this.allTypes.filter(t => t.toLocaleUpperCase() === type);
         }
         return true;
@@ -46,17 +47,6 @@ export class ProjectsComponent implements OnInit {
 
   isSelected() {
     return this.selectedTypes.length > 0;
-  }
-
-  getOpenBtnName(project: any) {
-    if (project.url === 'https://exponenta.ru/contacts')
-      return 'PROJECT.GETINFO'
-    else
-      return 'PROJECT.OPEN'
-  }
-
-  btnLinkClick(url: string) {
-    window.open(url);
   }
 
 }

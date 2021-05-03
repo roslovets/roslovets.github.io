@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { LangService } from '../services/lang.service';
 import { DataService } from '../services/data.service';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-videos',
@@ -14,10 +14,11 @@ export class VideosComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private langService: LangService,
-    private dataService: DataService
+    private dataService: DataService,
+    private langService: LangService
   ) { }
 
+  typePrefix: string = 'VIDEO.TYPE.';
   allTypes: string[] = [
     'VIDEO.TYPE.PLAYLIST',
     'VIDEO.TYPE.VIDEO',
@@ -28,16 +29,12 @@ export class VideosComponent implements OnInit {
   queryParams$: Observable<boolean>;
   videos$: Observable<any>;
 
-  showPlaylist: boolean = true;
-  showVideo: boolean = true;
-  showStream: boolean = true;
-
   ngOnInit() {
     this.queryParams$ = this.route.queryParams.pipe(
       map((params: any): boolean => {
         let type = params['type'];
         if (type) {
-          type = "VIDEO.TYPE." + type.toLocaleUpperCase();
+          type = this.typePrefix + type.toLocaleUpperCase();
           this.initTypes = this.allTypes.filter(t => t.toLocaleUpperCase() === type);
         }
         return true;
@@ -56,10 +53,6 @@ export class VideosComponent implements OnInit {
 
   isEn(): boolean {
     return this.langService.isEn();
-  }
-
-  btnLinkClick(url) {
-    window.open(url);
   }
 
 }

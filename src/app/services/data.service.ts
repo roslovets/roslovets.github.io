@@ -26,15 +26,4 @@ export class DataService {
     return this.http.get(this.BASEURL + "events.json");
   }
 
-  getCover(entity) {
-    return "assets/images/covers/" + entity.cover;
-  }
-
-  getAvatar(entity) {
-    return "assets/images/" + entity.type + "-logo.png";
-  }
-
-  getBinary(repo) {
-    return this.http.get("https://api.github.com/repos/" + repo + "/releases/latest");
-  }
 }

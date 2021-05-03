@@ -1,0 +1,18 @@
+<mat-card class="content-card mx-auto">
+    <mat-card-header>
+        <img mat-card-avatar class="m-1" [src]="getAvatar()" *ngIf="showAvatar">
+        <mat-card-title>{{entity.title | translate}}</mat-card-title>
+        <mat-card-subtitle>{{entity.description | translate}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="getCover()" alt="Cover" *ngIf="entity.cover">
+    <mat-card-content class="multi_lines_text">{{entity.details | translate}}</mat-card-content>
+    <mat-card-actions class="text-right">
+        <button mat-button (click)="btnLinkClick(entity.github)" *ngIf="entity.github">GITHUB</button>
+        <button mat-button (click)="btnLinkClick(entity.url)" *ngIf="entity.url">{{getOpenBtnName(entity) |
+            translate}}</button>
+        <button mat-button (click)="btnLinkClick(entity.materials)" *ngIf="entity.materials">{{'VIDEO.MATERIALS' |
+            translate}}</button>
+        <button mat-button (click)="btnLinkClick(entity.youtube)" *ngIf="entity.youtube">{{'VIDEO.WATCH' |
+            translate}}</button>
+    </mat-card-actions>
+</mat-card>

@@ -16,19 +16,7 @@
 
     <div class="d-flex align-content-center flex-wrap mb-3 mt-4">
       <div class="flex-grow-1 mx-auto mt-2" *ngFor="let video of filterByType(videos)">
-        <mat-card class="content-card mx-auto">
-          <mat-card-header>
-            <mat-card-title>{{video.title | translate}}</mat-card-title>
-            <mat-card-subtitle>{{video.type | translate}}</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image [src]="dataService.getCover(video)" alt="Video cover" *ngIf="video.cover">
-          <mat-card-content class="multi_lines_text">{{video.details | translate}}</mat-card-content>
-          <mat-card-actions class="text-right">
-            <button mat-button (click)="btnLinkClick(video.materials)" *ngIf="video.materials">{{'VIDEO.MATERIALS' |
-              translate}}</button>
-            <button mat-button (click)="btnLinkClick(video.youtube)">{{'VIDEO.WATCH' | translate}}</button>
-          </mat-card-actions>
-        </mat-card>
+        <app-card [entity]="video" [showAvatar]="false"></app-card>
       </div>
     </div>
 

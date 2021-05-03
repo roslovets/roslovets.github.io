@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-
-import { LangService } from '../services/lang.service';
+import { map } from 'rxjs/operators';
 import { DataService } from '../services/data.service';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-events',
@@ -12,32 +13,45 @@ import { DataService } from '../services/data.service';
 export class EventsComponent implements OnInit {
 
   constructor(
-    private langService: LangService,
-    private dataService: DataService
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private langService: LangService
   ) { }
 
+  typePrefix: string = 'EVENT.TYPE.';
+  allTypes: string[] = [
+    'EVENT.TYPE.WEBINAR',
+    'EVENT.TYPE.SEMINAR'
+  ];
+  selectedTypes: string[] = [];
+  initTypes: string[];
+  queryParams$: Observable<boolean>;
   events$: Observable<any>;
-  showSeminar: boolean = true;
-  showWebinar: boolean = true;
 
   ngOnInit() {
+    this.queryParams$ = this.route.queryParams.pipe(
+      map((params: any): boolean => {
+        let type = params['type'];
+        if (type) {
+          type = this.typePrefix + type.toLocaleUpperCase();
+          this.initTypes = this.allTypes.filter(t => t.toLocaleUpperCase() === type);
+        }
+        return true;
+      }),
+    );
     this.events$ = this.dataService.getEvents();
+  }
+
+  filterByType(events: any[]): any[] {
+    return events.filter(event => this.selectedTypes.includes(event.type));
+  }
+
+  isSelected() {
+    return this.selectedTypes.length > 0;
   }
 
   isEn(): boolean {
     return this.langService.isEn();
-  }
-
-  btnLinkClick(url) {
-    window.open(url);
-  }
-
-  checkShow(type) {
-    switch (type) {
-      case 'EVENT.TYPE.SEMINAR': return this.showSeminar;
-      case 'EVENT.TYPE.WEBINAR': return this.showWebinar;
-      default: return true;
-    }
   }
 
 }

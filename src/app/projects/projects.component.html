@@ -1,6 +1,7 @@
 <div class="container mb-5" *ngIf="queryParams$ | async">
 
-  <app-types [allTypes]="allTypes" [initTypes]="initTypes" (selectedTypesChange)="selectedTypes=$event"></app-types>
+  <app-types [allTypes]="allTypes" [initTypes]="initTypes" [showPlural]="false"
+    (selectedTypesChange)="selectedTypes=$event"></app-types>
 
   <div *ngIf="!isSelected()">
     <app-empty></app-empty>

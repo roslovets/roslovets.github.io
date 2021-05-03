@@ -12,6 +12,7 @@ export class TypesComponent implements OnInit, OnDestroy {
 
   @Input() allTypes: string[];
   @Input() initTypes: string[];
+  @Input() showPlural: boolean = true;
   @Output() selectedTypesChange = new EventEmitter<string[]>();
   selectedTypes: string[] = [];
   contentChboxesSub: Subscription;
@@ -40,7 +41,11 @@ export class TypesComponent implements OnInit, OnDestroy {
   }
 
   getType(num: number): string {
-    return this.allTypes[num];
+    let type = this.allTypes[num];
+    if (this.showPlural) {
+      type = type + "S";
+    };
+    return type;
   }
 
   ngOnDestroy() {

@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FAModule } from './fa.module';
-import { MetaModule } from '@ngx-meta/core';
 import { StorageModule } from '@ngx-pwa/local-storage';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -57,7 +56,6 @@ export function createTranslateLoader(http: HttpClient) {
     FlexLayoutModule,
     BrowserAnimationsModule,
     FAModule,
-    MetaModule.forRoot(),
     StorageModule.forRoot({
       IDBNoWrap: true,
     }),

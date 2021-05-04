@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { LangService } from './services/lang.service';
 
 @Component({

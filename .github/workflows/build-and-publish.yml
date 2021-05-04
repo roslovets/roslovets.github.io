@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 14
 
-      - name: 🛠️ Build
+      - name: 🛠️ Build SPA
         run: |
           npm ci
           npm run build
@@ -26,14 +26,14 @@ jobs:
       - name: 🔧 Fix SPA routing for GH Pages
         run: cp dist/index.html dist/404.html
 
-      - name: 📢 Publish
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+      - name: 📢 Publish SPA
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
           folder: dist
 
-      - name: 🧾 Build changelog
-        id: build_changelog
+      - name: 🧾 Compose changelog
+        id: compose_changelog
         uses: mikepenz/release-changelog-builder-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,6 +41,6 @@ jobs:
       - name: 🔖 Create release
         uses: softprops/action-gh-release@v1
         with:
-          body: ${{steps.build_changelog.outputs.changelog}}
+          body: ${{steps.compose_changelog.outputs.changelog}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

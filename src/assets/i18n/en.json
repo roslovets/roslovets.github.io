@@ -36,7 +36,7 @@
 		},
 		"ROSLOVETS":{
 			"DESCRIPTION":"This site",
-			"DETAILS":"The portfolio site includes descriptions and links to my projects, videos and event materials.\nSite is built with Angular 8 framework and uses Bootstrap and Angular Material libraries. Content is presented in Russian and English"
+			"DETAILS":"The portfolio site includes descriptions and links to my projects, videos and event materials.\nSite is built with Angular 11 framework and uses Bootstrap and Angular Material libraries. Content is presented in Russian and English"
 		},
 		"FARYA":{
 			"DESCRIPTION":"Blog of Farida Roslovets",
@@ -116,6 +116,26 @@
 			"MATLAB":"MATLAB",
 			"SIMULINK":"Simulink",
 			"WEB":"WEB"
+		},
+		"GRAPHQL":{
+			"DESCRIPTION":"Transfer data over GraphQL",
+			"DETAILS":"Get and send data using GraphQL queries directly from MATLAB"
+		},
+		"MLXMD":{
+			"DESCRIPTION":"Convert MATLAB scripts to Markdown",
+			"DETAILS":"Toolbox that allows you to export interactive MATLAB Live Scripts to GitHub-optimized Markdown text files"
+		},
+		"CKEDITOR":{
+			"DESCRIPTION":"CKEditor for Strapi headless CMS",
+			"DETAILS":"Replace default WYSIWYG-editor of the headless CMS Strapi with CKEditor 5 with advanced customizations"
+		},
+		"HOMEBOT":{
+			"DESCRIPTION":"My sweet home controller",
+			"DETAILS":"Telegram bot works in conjunction with the Home Assistant server (Raspberry Pi) to control lights, vacuum cleaner, TV, etc."
+		},
+		"GREENLOCK":{
+			"DESCRIPTION":"Reverse proxy with free HTTPS",
+			"DETAILS":"- Automatically get free SSL sertificate from Let's Encrypt\n- Easily redirect requests for your domain to any internal address (like server on any port)\n- Distribute incoming traffic across several servers with built-in balancer"
 		}
 	},
 	"VIDEO":{
@@ -211,7 +231,7 @@
 			"DETAILS":"About MATLAB tools for importing, processing and analyzing data and creating efficient machine learning models"
 		},
 		"STATEFLOW":{
-			"TITLE":"Effective development of control logic",
+			"TITLE":"Effective Development of Control Logic",
 			"DETAILS":"I show how to create control logic in the form of Stateflow diagrams, test and debug it by simulation in various situations, then run it on the microcontroller by generating code and debug in real time"
 		},
 		"AUTONOMOUS":{
@@ -233,6 +253,18 @@
 		"DIGTWIN20":{
 			"TITLE":"Digital Twins and Virtual Benches with Simulink Compiler",
 			"DETAILS":"Consider the functionality that allows you to run on servers and computers full-fledged self-refining digital twins, simulators and virtual stands designed for mass use by enterprise employees"
+		},
+		"DEVOPS21":{
+			"TITLE":"Collaborative Work and DevOps in Engineering",
+			"DETAILS":"- Efficient collaborative development in MATLAB Simulink\n- Establishing version control in team\n- Using DevOps tools for engineering development"
+		},
+		"EDU21":{
+			"TITLE":"Application of MATLAB Simulink in Education",
+			"DETAILS":"- Implementation of interactive tutorials\n- Application of modeling for teaching technical disciplines\n- Creating fun lab benches\n- Homework automation"
+		},
+		"AUTONOMOUS21":{
+			"TITLE":"Sensor fusion and drone navigation",
+			"DETAILS":"- Unmanned vehicle sensor fusion\n- Development of robotic algorithms for trajectory planning and following"
 		}
 	}
 }

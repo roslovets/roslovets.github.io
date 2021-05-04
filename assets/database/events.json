@@ -1,5 +1,29 @@
 [
 	{
+		"title":"EVENT.AUTONOMOUS21.TITLE",
+		"code":"AUTONOMOUS21",
+		"cover":"autonomous21-web.jpg",
+		"type":"EVENT.TYPE.WEBINAR",
+		"details":"EVENT.AUTONOMOUS21.DETAILS",
+		"materials":"https:\/\/exponenta.ru\/events\/kompleksirovanie-pokazanij-datchikov-i-navigaciya-bespilotnikov"
+	},
+	{
+		"title":"EVENT.DEVOPS21.TITLE",
+		"code":"DEVOPS21",
+		"cover":"devops21-web.jpg",
+		"type":"EVENT.TYPE.WEBINAR",
+		"details":"EVENT.DEVOPS21.DETAILS",
+		"materials":"https:\/\/exponenta.ru\/events\/komandnaya-razrabotka-i-devops-v-inzhenerii"
+	},
+	{
+		"title":"EVENT.EDU21.TITLE",
+		"code":"EDU21",
+		"cover":"edu21-web.jpg",
+		"type":"EVENT.TYPE.WEBINAR",
+		"details":"EVENT.EDU21.DETAILS",
+		"materials":"https:\/\/exponenta.ru\/events\/primenenie-matlab-i-simulink-v-obrazovanii-0221"
+	},
+	{
 		"title":"EVENT.DIGTWIN20.TITLE",
 		"code":"DIGTWIN20",
 		"cover":"digtwin20-web.jpg",

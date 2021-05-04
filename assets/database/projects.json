@@ -1,7 +1,7 @@
 [
 	{
 		"title":"MATLAB WEB API",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"WEBAPI",
 		"cover":"matlab-web-api.jpg",
 		"description":"PROJECT.WEBAPI.DESCRIPTION",
@@ -10,8 +10,18 @@
 		"url":"https:\/\/www.mathworks.com\/matlabcentral\/fileexchange\/68611"
 	},
 	{
+		"title":"MATLAB GraphQL Client",
+		"type":"PROJECT.TYPE.MATLAB",
+		"code":"GRAPHQL",
+		"cover":"matlab-graphql.jpg",
+		"description":"PROJECT.GRAPHQL.DESCRIPTION",
+		"details":"PROJECT.GRAPHQL.DETAILS",
+		"github":"https:\/\/github.com\/roslovets\/MATLAB-GraphQL",
+		"url":"https:\/\/www.mathworks.com\/matlabcentral\/fileexchange\/80647"
+	},
+	{
 		"title":"Icons for MATLAB",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"ICONS",
 		"cover":"icons-for-matlab.jpg",
 		"description":"PROJECT.ICONS.DESCRIPTION",
@@ -20,18 +30,18 @@
 		"url":"https:\/\/www.mathworks.com\/matlabcentral\/fileexchange\/72044"
 	},
 	{
-		"title":"Exponenta Toolbox",
-		"type":"MATLAB",
-		"code":"EXP",
-		"cover":"exponenta-toolbox.jpg",
-		"description":"PROJECT.EXP.DESCRIPTION",
-		"details":"PROJECT.EXP.DETAILS",
-		"github":"https:\/\/github.com\/ETMC-Exponenta\/ExponentaToolbox",
-		"url":"https:\/\/hub.exponenta.ru\/post\/exponenta-toolbox-bystryy-dostup-k-russkoyazychnym-materialam562"
+		"title":"Live Script To Markdown Converter",
+		"type":"PROJECT.TYPE.MATLAB",
+		"code":"MLXMD",
+		"cover":"mlx2md.jpg",
+		"description":"PROJECT.MLXMD.DESCRIPTION",
+		"details":"PROJECT.MLXMD.DETAILS",
+		"github":"https:\/\/github.com\/roslovets\/Live-Script-to-Markdown-Converter",
+		"url":"https:\/\/www.mathworks.com\/matlabcentral\/fileexchange\/89516"
 	},
 	{
 		"title":"Toolbox Extender",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"TBEXT",
 		"cover":"toolbox-extender.jpg",
 		"description":"PROJECT.TBEXT.DESCRIPTION",
@@ -40,8 +50,18 @@
 		"url":"https:\/\/www.mathworks.com\/matlabcentral\/fileexchange\/69126"
 	},
 	{
+		"title":"Exponenta Toolbox",
+		"type":"PROJECT.TYPE.MATLAB",
+		"code":"EXP",
+		"cover":"exponenta-toolbox.jpg",
+		"description":"PROJECT.EXP.DESCRIPTION",
+		"details":"PROJECT.EXP.DETAILS",
+		"github":"https:\/\/github.com\/ETMC-Exponenta\/ExponentaToolbox",
+		"url":"https:\/\/hub.exponenta.ru\/post\/exponenta-toolbox-bystryy-dostup-k-russkoyazychnym-materialam562"
+	},
+	{
 		"title":"MATLAB Course for Educators",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"EDU",
 		"cover":"edu-course.jpg",
 		"description":"PROJECT.EDU.DESCRIPTION",
@@ -51,7 +71,7 @@
 	},
 	{
 		"title":"Data Analysis Demo",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"DATA",
 		"cover":"data-demo.jpg",
 		"description":"PROJECT.DATA.DESCRIPTION",
@@ -60,28 +80,28 @@
 		"url":""
 	},
 	{
-		"title":"RegPrint",
-		"type":"MATLAB",
+		"title":"RegPrint App",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"REGPRINT",
 		"cover":"regprint.jpg",
 		"description":"PROJECT.REGPRINT.DESCRIPTION",
 		"details":"PROJECT.REGPRINT.DETAILS",
 		"github":"",
-		"url":"https:\/\/exponenta.ru\/contacts"
+		"url":""
 	},
 	{
 		"title":"MATLAB\/Simulink Exam",
-		"type":"MATLAB",
+		"type":"PROJECT.TYPE.MATLAB",
 		"code":"CERT",
 		"cover":"ml-cert.jpg",
 		"description":"PROJECT.CERT.DESCRIPTION",
 		"details":"PROJECT.CERT.DETAILS",
 		"github":"",
-		"url":"https:\/\/exponenta.ru\/contacts"
+		"url":""
 	},
 	{
 		"title":"GYROBOY MATLAB PROJECT",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"GMP",
 		"cover":"gmp.jpg",
 		"description":"PROJECT.GMP.DESCRIPTION",
@@ -91,7 +111,7 @@
 	},
 	{
 		"title":"RACECAR",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"RACECAR",
 		"cover":"racecar.jpg",
 		"description":"PROJECT.RACECAR.DESCRIPTION",
@@ -101,7 +121,7 @@
 	},
 	{
 		"title":"Virus Propagation Simulator",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"VIRUS",
 		"cover":"virus.jpg",
 		"description":"PROJECT.VIRUS.DESCRIPTION",
@@ -111,7 +131,7 @@
 	},
 	{
 		"title":"Instrument Control over Serial",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"INSTR",
 		"cover":"instrument-control.jpg",
 		"description":"PROJECT.INSTR.DESCRIPTION",
@@ -121,7 +141,7 @@
 	},
 	{
 		"title":"Fidget Spinner 3-DOF Gyroscope",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SPINNER",
 		"cover":"spinner.jpg",
 		"description":"PROJECT.SPINNER.DESCRIPTION",
@@ -131,7 +151,7 @@
 	},
 	{
 		"title":"Spinner Speedometer",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SPEED",
 		"cover":"speedometer.jpg",
 		"description":"PROJECT.SPEED.DESCRIPTION",
@@ -141,7 +161,7 @@
 	},
 	{
 		"title":"Arduino Weather Station",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"WEATHER",
 		"cover":"weather-station.jpg",
 		"description":"PROJECT.WEATHER.DESCRIPTION",
@@ -151,7 +171,7 @@
 	},
 	{
 		"title":"Arduino IoT Library",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"SENSORS",
 		"cover":"arduino-sensors.jpg",
 		"description":"PROJECT.SENSORS.DESCRIPTION",
@@ -161,17 +181,17 @@
 	},
 	{
 		"title":"Atomic Frequency Standard",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"FREQ",
 		"cover":"freq-stand.jpg",
 		"description":"PROJECT.FREQ.DESCRIPTION",
 		"details":"PROJECT.FREQ.DETAILS",
 		"github":"",
-		"url":"https:\/\/exponenta.ru\/contacts"
+		"url":""
 	},
 	{
 		"title":"NeuroMatrix Target",
-		"type":"Simulink",
+		"type":"PROJECT.TYPE.SIMULINK",
 		"code":"NMTARGET",
 		"cover":"neuromatrix-target.jpg",
 		"description":"PROJECT.NMTARGET.DESCRIPTION",
@@ -181,17 +201,17 @@
 	},
 	{
 		"title":"NetSuite Scripts",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"NS",
 		"cover":"netsuite.jpg",
 		"description":"PROJECT.NS.DESCRIPTION",
 		"details":"PROJECT.NS.DETAILS",
 		"github":"",
-		"url":"https:\/\/exponenta.ru\/contacts"
+		"url":""
 	},
 	{
 		"title":"OTUS Quiz Bot (Telegram)",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"QUIZBOT",
 		"cover":"quizbot.jpg",
 		"description":"PROJECT.QUIZBOT.DESCRIPTION",
@@ -200,28 +220,28 @@
 		"url":"https:\/\/t.me\/otusquiz_bot"
 	},
 	{
-		"title":"Telegram Redirect",
-		"type":"WEB",
-		"code":"TG",
-		"cover":"tg.jpg",
-		"description":"PROJECT.TG.DESCRIPTION",
-		"details":"PROJECT.TG.DETAILS",
-		"github":"https:\/\/github.com\/roslovets\/tg",
-		"url":"https:\/\/roslovets.github.io\/tg"
+		"title":"Smart Home Bot (Telegram)",
+		"type":"PROJECT.TYPE.WEB",
+		"code":"HOMEBOT",
+		"cover":"homebot.jpg",
+		"description":"PROJECT.HOMEBOT.DESCRIPTION",
+		"details":"PROJECT.HOMEBOT.DETAILS",
+		"github":"",
+		"url":""
 	},
 	{
-		"title":"GitHub Binary Downloader",
-		"type":"WEB",
-		"code":"GHBIN",
-		"cover":"ghbin.jpg",
-		"description":"PROJECT.GHBIN.DESCRIPTION",
-		"details":"PROJECT.GHBIN.DETAILS",
-		"github":"https:\/\/github.com\/roslovets\/ghbin",
-		"url":"https:\/\/roslovets.github.io\/ghbin"
+		"title":"Strapi CKEditor5 plugin",
+		"type":"PROJECT.TYPE.WEB",
+		"code":"CKEDITOR",
+		"cover":"ckeditor.jpg",
+		"description":"PROJECT.CKEDITOR.DESCRIPTION",
+		"details":"PROJECT.CKEDITOR.DETAILS",
+		"github":"https:\/\/github.com\/Roslovets-Inc\/strapi-plugin-ckeditor5",
+		"url":"https:\/\/www.npmjs.com\/package\/strapi-plugin-ckeditor5"
 	},
 	{
 		"title":"FaryaRos.com",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"FARYA",
 		"cover":"faryaros.jpg",
 		"description":"PROJECT.FARYA.DESCRIPTION",
@@ -231,12 +251,42 @@
 	},
 	{
 		"title":"roslovets.github.io",
-		"type":"WEB",
+		"type":"PROJECT.TYPE.WEB",
 		"code":"ROSLOVETS",
 		"cover":"roslovets.jpg",
 		"description":"PROJECT.ROSLOVETS.DESCRIPTION",
 		"details":"PROJECT.ROSLOVETS.DETAILS",
 		"github":"https:\/\/github.com\/roslovets\/roslovets.github.io",
 		"url":""
+	},
+	{
+		"title":"Greenlock Proxy Wrapper",
+		"type":"PROJECT.TYPE.WEB",
+		"code":"GREENLOCK",
+		"cover":"greenlock.jpg",
+		"description":"PROJECT.GREENLOCK.DESCRIPTION",
+		"details":"PROJECT.GREENLOCK.DETAILS",
+		"github":"https:\/\/github.com\/Roslovets-Inc\/greenlock-proxy",
+		"url":"https:\/\/www.npmjs.com\/package\/greenlock-proxy"
+	},
+	{
+		"title":"GitHub Binary Downloader",
+		"type":"PROJECT.TYPE.WEB",
+		"code":"GHBIN",
+		"cover":"ghbin.jpg",
+		"description":"PROJECT.GHBIN.DESCRIPTION",
+		"details":"PROJECT.GHBIN.DETAILS",
+		"github":"https:\/\/github.com\/roslovets\/ghbin",
+		"url":"https:\/\/roslovets.github.io\/ghbin"
+	},
+	{
+		"title":"Telegram Redirect",
+		"type":"PROJECT.TYPE.WEB",
+		"code":"TG",
+		"cover":"tg.jpg",
+		"description":"PROJECT.TG.DESCRIPTION",
+		"details":"PROJECT.TG.DETAILS",
+		"github":"https:\/\/github.com\/roslovets\/tg",
+		"url":"https:\/\/roslovets.github.io\/tg"
 	}
 ]

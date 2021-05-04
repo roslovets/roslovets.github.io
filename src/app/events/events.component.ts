@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DataService } from '../services/data.service';
-import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-events',
@@ -14,8 +13,7 @@ export class EventsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService,
-    private langService: LangService
+    private dataService: DataService
   ) { }
 
   typePrefix: string = 'EVENT.TYPE.';
@@ -48,10 +46,6 @@ export class EventsComponent implements OnInit {
 
   isSelected() {
     return this.selectedTypes.length > 0;
-  }
-
-  isEn(): boolean {
-    return this.langService.isEn();
   }
 
 }

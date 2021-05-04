@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TypesComponent } from './types/types.component';
 import { EmptyComponent } from './empty/empty.component';
 import { CardComponent } from './card/card.component';
+import { LangAlertComponent } from './lang-alert/lang-alert.component';
 
 import { LangService } from './services/lang.service';
 import { DataService } from './services/data.service';
@@ -43,7 +44,8 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     TypesComponent,
     EmptyComponent,
-    CardComponent
+    CardComponent,
+    LangAlertComponent
   ],
   imports: [
     BrowserModule,

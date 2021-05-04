@@ -2,11 +2,7 @@
 
   <app-types [allTypes]="allTypes" [initTypes]="initTypes" (selectedTypesChange)="selectedTypes=$event"></app-types>
 
-  <div *ngIf="isEn()" class="row mt-2 justify-content-center">
-    <div class="alert alert-info py-1 text-center" role="alert">
-      All events materials are presented in Russian. Sorry
-    </div>
-  </div>
+  <app-lang-alert message="All events materials are presented in Russian. Sorry" [langs]="['en']"></app-lang-alert>
 
   <div *ngIf="!isSelected()">
     <app-empty></app-empty>

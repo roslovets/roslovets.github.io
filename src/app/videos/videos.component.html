@@ -2,11 +2,8 @@
 
   <app-types [allTypes]="allTypes" [initTypes]="initTypes" (selectedTypesChange)="selectedTypes=$event"></app-types>
 
-  <div *ngIf="isEn()" class="row mt-2 justify-content-center">
-    <div class="alert alert-info py-1 text-center" role="alert">
-      All videos in Russian. Use auto-translate captions on Youtube
-    </div>
-  </div>
+  <app-lang-alert message="All videos in Russian. Use auto-translate captions on Youtube" [langs]="['en']">
+  </app-lang-alert>
 
   <div *ngIf="!isSelected()">
     <app-empty></app-empty>

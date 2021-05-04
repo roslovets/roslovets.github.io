@@ -71,8 +71,4 @@ export class LangService {
     return this.LANGS;
   }
 
-  isEn(): boolean {
-    return this.getLang() === 'en';
-  }
-
 }

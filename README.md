@@ -12,4 +12,4 @@
   - [Live streams](https://roslovets.github.io/videos?type=stream)
 - [Events](https://roslovets.github.io/events)
   - [Online webinars](https://roslovets.github.io/events?type=webinar)
-  - [Seminars recordings](https://roslovets.github.io/events?type=seminar)
+  - [Recordings of seminars](https://roslovets.github.io/events?type=seminar)

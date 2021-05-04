@@ -29,7 +29,15 @@ jobs:
           branch: gh-pages
           folder: dist
 
-      - name: 🔖 Create Release
+      - name: 🧾 Build changelog
+        id: build_changelog
+        uses: mikepenz/release-changelog-builder-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔖 Create release
         uses: softprops/action-gh-release@v1
+        with:
+          body: ${{steps.build_changelog.outputs.changelog}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

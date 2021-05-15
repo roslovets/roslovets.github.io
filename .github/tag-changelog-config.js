@@ -17,17 +17,15 @@ module.exports = {
 
   renderTypeSection: function (label, commits) {
     commits = commits.filter((commit) => !commit.subject.endsWith("[skip ci]"));
-
     if (commits.length > 0) {
       let text = `\n## ${label}\n`;
       commits.forEach((commit) => {
         text += `- ${commit.subject}\n`;
       });
+      return text;
     } else {
-      text = "";
+      return "";
     }
-
-    return text;
   },
 
   renderChangelog: function (release, changes) {

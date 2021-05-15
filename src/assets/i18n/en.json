@@ -36,11 +36,11 @@
 		},
 		"ROSLOVETS":{
 			"DESCRIPTION":"This site",
-			"DETAILS":"The portfolio site includes descriptions and links to my projects, videos and event materials.\nSite is built with Angular 11 framework and uses Bootstrap and Angular Material libraries. Content is presented in Russian and English"
+			"DETAILS":"The portfolio site includes descriptions and links to my projects, videos and event materials.\nSite is built with Angular 12 framework and uses Bootstrap and Angular Material libraries. Content is presented in Russian and English"
 		},
 		"FARYA":{
 			"DESCRIPTION":"Blog of Farida Roslovets",
-			"DETAILS":"The blog site includes Farya's articles, videos and contacts.\nSite is built with Angular 8 framework and uses Bootstrap and Angular Material libraries. Angular Universal is used for server-side rendering (SSR). Site database is stored in MongoDB"
+			"DETAILS":"The blog site includes Farya's articles, videos and contacts.\nSite is built with Angular 11 framework and uses Bootstrap and Angular Material libraries. Angular Universal is used for server-side rendering (SSR). Site database is stored in MongoDB"
 		},
 		"GMP":{
 			"DESCRIPTION":"Self-balancing Lego EV3 robot ",

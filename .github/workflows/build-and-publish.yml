@@ -2,8 +2,8 @@ name: Build and publish portfolio
 
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - main
 
 jobs:
   build-and-publish:
@@ -17,6 +17,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+
+      - name: "🔢 Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          target-branch: "main"
+          commit-message: "ci: bumps version to {{version}} [skip ci]"
 
       - name: 🛠️ Build SPA
         run: |

@@ -18,13 +18,19 @@ jobs:
         with:
           node-version: 14
 
-      - name: "🔢 Automated Version Bump"
+      - name: "🔢 Automated version bump"
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target-branch: "main"
           commit-message: "ci: bumps version to {{version}} [skip ci]"
+
+      - name: 📑 Create changelog text
+        id: changelog
+        uses: loopwerk/tag-changelog@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🛠️ Build SPA
         run: |
@@ -40,7 +46,8 @@ jobs:
           branch: gh-pages
           folder: dist
 
-      - name: 🔖 Create release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🛎️ Create release
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ steps.changelog.outputs.changes }}

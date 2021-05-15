@@ -16,7 +16,7 @@ module.exports = {
   excludeTypes: ["other"],
 
   renderTypeSection: function (label, commits) {
-    commits = commits.filter((commit) => !commit.endsWith("[skip ci]"));
+    commits = commits.filter((commit) => !commit.includes("[skip ci]"));
 
     if (commits.length > 0) {
       let text = `\n## ${label}\n`;

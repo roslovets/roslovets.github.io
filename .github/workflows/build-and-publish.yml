@@ -19,6 +19,7 @@ jobs:
           node-version: 14
 
       - name: "🔢 Automated version bump"
+        id: version
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,3 +52,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: ${{ steps.changelog.outputs.changes }}
+          tag: $${{ steps.version.outputs.newTag }}

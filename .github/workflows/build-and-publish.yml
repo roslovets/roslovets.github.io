@@ -28,6 +28,7 @@ jobs:
         id: changelog
         uses: loopwerk/tag-changelog@v1
         with:
+          config_file: .github/tag-changelog-config.js
           token: ${{ secrets.GITHUB_TOKEN }}
 
   build_and_publish:
